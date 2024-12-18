@@ -64,16 +64,11 @@ I64 FloorI64(I64 num, I64 to)
 
 I64 CeilI64(I64 num, I64 to)
 {//Int multiples of num.
+	num += to - 1;
 	if (num >= 0)
-	{
-		num += to - 1;
 		return num - num % to;
-	}
 	else
-	{
-		num += to - 1;
 		return num - num % to - to;
-	}
 }
 
 //See $LK,"::/Doc/Credits.DD"$.
